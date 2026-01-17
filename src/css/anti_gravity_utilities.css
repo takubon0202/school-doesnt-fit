@@ -1,0 +1,115 @@
+/* ==========================================================================
+   Anti-Gravity Utilities - Add to style.css
+   ========================================================================== */
+
+/* Glassmorphism Panel */
+.glass-panel {
+    background: var(--glass-surface);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-lg);
+    border-radius: var(--border-radius-lg);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glass Shine Effect */
+.glass-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* Floating Animation Utility */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.float-animation {
+    animation: float var(--transition-float);
+}
+
+.float-animation--delay {
+    animation-delay: 1.5s;
+}
+
+/* Refactored Components using Glassmorphism */
+
+.card,
+.journey-item__content,
+.about__card,
+.turning-point,
+.testimonial,
+.preview__intro,
+.preview__chapter,
+.message-v2__panel-inner,
+.author-story__motto,
+.author__card {
+    background: var(--glass-surface);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: var(--shadow-lg);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    transition: all var(--transition-base);
+}
+
+/* Hover Lift Effect */
+.card:hover,
+.journey-item:hover .journey-item__content,
+.about__card:hover,
+.turning-point:hover,
+.preview__chapter:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: var(--shadow-floating);
+    border-color: var(--glass-highlight);
+    background: rgba(255, 255, 255, 0.75);
+}
+
+/* Typography Refresh in Cards */
+.card h3,
+.about__card-title,
+.turning-point__title {
+    letter-spacing: 0.05em;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.card p,
+.about__card-text,
+.turning-point__text {
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+}
+
+/* Section Backgrounds - Subtle Gradients */
+.fullscreen-section:nth-child(even) {
+    background: var(--color-bg-secondary);
+}
+
+.fullscreen-section:nth-child(odd) {
+    background: var(--color-bg-primary);
+}
+
+/* Hero Section Specifics */
+.hero {
+    background: radial-gradient(circle at 70% 30%, rgba(194, 106, 45, 0.05) 0%, transparent 60%),
+        radial-gradient(circle at 20% 80%, rgba(30, 77, 58, 0.05) 0%, transparent 60%),
+        var(--color-bg-primary);
+}
