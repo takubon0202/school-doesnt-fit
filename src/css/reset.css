@@ -1,0 +1,144 @@
+/* ==========================================================================
+   CSS Reset - モダンなリセットスタイル
+   ========================================================================== */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* マージンのリセット */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* スムーズスクロール */
+html {
+  scroll-behavior: smooth;
+}
+
+/* フォント設定とアンチエイリアス */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* bodyの基本設定 */
+body {
+  min-height: 100vh;
+  line-height: var(--line-height-base);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+}
+
+/* 画像のレスポンシブ対応 */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* フォーム要素のフォント継承 */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 見出しのフォントサイズ継承 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* リストスタイルのリセット */
+ul,
+ol {
+  list-style: none;
+}
+
+/* リンクのスタイル */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* テーブルのボーダー */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ボタンの外観リセット */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* テキストエリアのリサイズ */
+textarea {
+  resize: vertical;
+}
+
+/* アクセシビリティ：フォーカス表示 */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* スキップリンク用（アクセシビリティ） */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  padding: var(--spacing-sm) var(--spacing-md);
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* 非表示ユーティリティ（スクリーンリーダー用） */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* プリファレンス：アニメーション削減 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

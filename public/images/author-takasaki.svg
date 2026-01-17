@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="sky-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB"/>
+      <stop offset="100%" style="stop-color:#B0E0E6"/>
+    </linearGradient>
+    <linearGradient id="hoodie-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2C3E50"/>
+      <stop offset="100%" style="stop-color:#1a252f"/>
+    </linearGradient>
+    <linearGradient id="beanie-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#6B7B8C"/>
+      <stop offset="100%" style="stop-color:#4A5568"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="400" fill="url(#sky-gradient)"/>
+
+  <!-- Sun rays -->
+  <g stroke="#FFD700" stroke-width="3" opacity="0.4">
+    <line x1="350" y1="30" x2="320" y2="80"/>
+    <line x1="370" y1="50" x2="330" y2="90"/>
+    <line x1="380" y1="80" x2="340" y2="110"/>
+    <line x1="30" y1="30" x2="60" y2="70"/>
+    <line x1="20" y1="60" x2="55" y2="90"/>
+  </g>
+
+  <!-- Clouds -->
+  <g fill="white">
+    <ellipse cx="80" cy="60" rx="40" ry="20"/>
+    <ellipse cx="50" cy="55" rx="25" ry="15"/>
+    <ellipse cx="110" cy="55" rx="25" ry="15"/>
+    <ellipse cx="320" cy="80" rx="35" ry="18"/>
+    <ellipse cx="350" cy="75" rx="25" ry="14"/>
+  </g>
+
+  <!-- Background elements (buildings, trees) -->
+  <rect x="280" y="150" width="60" height="80" fill="#8B7355" rx="5"/>
+  <rect x="290" y="160" width="15" height="15" fill="#87CEEB"/>
+  <rect x="315" y="160" width="15" height="15" fill="#87CEEB"/>
+  <ellipse cx="350" cy="180" rx="30" ry="40" fill="#228B22"/>
+  <ellipse cx="370" cy="190" rx="25" ry="35" fill="#2E8B57"/>
+
+  <!-- Railing -->
+  <rect x="0" y="200" width="400" height="8" fill="#C4A484"/>
+  <rect x="30" y="160" width="6" height="48" fill="#C4A484"/>
+  <rect x="80" y="160" width="6" height="48" fill="#C4A484"/>
+
+  <!-- Water/river hint -->
+  <rect x="0" y="230" width="400" height="170" fill="#4A90A4" opacity="0.3"/>
+
+  <!-- Body/Hoodie -->
+  <path d="M120,400 L120,280 Q120,250 150,240 L170,235 Q200,230 230,235 L250,240 Q280,250 280,280 L280,400 Z" fill="url(#hoodie-gradient)"/>
+
+  <!-- Hood part -->
+  <path d="M140,250 Q140,220 170,210 L200,205 L230,210 Q260,220 260,250" fill="#E74C3C"/>
+  <path d="M145,250 Q145,225 170,215 L200,210 L230,215 Q255,225 255,250" fill="url(#hoodie-gradient)"/>
+
+  <!-- Hood strings -->
+  <line x1="180" y1="250" x2="175" y2="290" stroke="#F5A623" stroke-width="3"/>
+  <line x1="220" y1="250" x2="225" y2="290" stroke="#F5A623" stroke-width="3"/>
+  <circle cx="175" cy="295" r="5" fill="#F5A623"/>
+  <circle cx="225" cy="295" r="5" fill="#F5A623"/>
+
+  <!-- Neck -->
+  <rect x="175" y="200" width="50" height="40" fill="#DEB887"/>
+
+  <!-- Face -->
+  <ellipse cx="200" cy="160" rx="65" ry="75" fill="#DEB887"/>
+
+  <!-- Beanie -->
+  <path d="M135,130 Q135,70 200,60 Q265,70 265,130 L265,140 Q200,150 135,140 Z" fill="url(#beanie-gradient)"/>
+  <rect x="135" y="130" width="130" height="15" fill="#4A5568"/>
+
+  <!-- Hair showing from beanie -->
+  <path d="M200,60 Q200,50 210,45 Q215,50 210,60" fill="#2F1810"/>
+  <path d="M195,62 Q200,52 205,60" fill="#2F1810"/>
+
+  <!-- Eyes (large anime style) -->
+  <ellipse cx="170" cy="155" rx="20" ry="18" fill="white"/>
+  <ellipse cx="230" cy="155" rx="20" ry="18" fill="white"/>
+  <circle cx="172" cy="158" r="12" fill="#1a1a1a"/>
+  <circle cx="232" cy="158" r="12" fill="#1a1a1a"/>
+  <circle cx="168" cy="152" r="4" fill="white"/>
+  <circle cx="228" cy="152" r="4" fill="white"/>
+
+  <!-- Eyebrows (happy) -->
+  <path d="M150,135 Q170,128 190,138" stroke="#2F1810" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M210,138 Q230,128 250,135" stroke="#2F1810" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+  <!-- Big smile -->
+  <path d="M160,190 Q200,220 240,190" stroke="#8B4513" stroke-width="3" fill="none"/>
+  <path d="M165,192 Q200,215 235,192" fill="#8B0000"/>
+  <path d="M175,195 Q200,205 225,195" fill="#FF6B6B"/>
+
+  <!-- Teeth showing -->
+  <rect x="185" y="193" width="30" height="12" fill="white" rx="2"/>
+
+  <!-- Blush -->
+  <ellipse cx="145" cy="175" rx="15" ry="8" fill="#FFB6C1" opacity="0.5"/>
+  <ellipse cx="255" cy="175" rx="15" ry="8" fill="#FFB6C1" opacity="0.5"/>
+
+  <!-- Arms holding tablet -->
+  <path d="M120,280 Q100,300 110,340 L130,350 L150,320 Q140,290 140,280" fill="#DEB887"/>
+  <path d="M280,280 Q300,300 290,340 L270,350 L250,320 Q260,290 260,280" fill="#DEB887"/>
+
+  <!-- Tablet -->
+  <rect x="140" y="300" width="120" height="80" rx="8" fill="#E74C3C"/>
+  <rect x="148" y="308" width="104" height="64" rx="4" fill="#4A90A4"/>
+
+  <!-- Hands -->
+  <ellipse cx="135" cy="345" rx="20" ry="15" fill="#DEB887"/>
+  <ellipse cx="265" cy="345" rx="20" ry="15" fill="#DEB887"/>
+
+  <!-- Fingers on tablet -->
+  <ellipse cx="150" cy="360" rx="8" ry="12" fill="#DEB887"/>
+  <ellipse cx="165" cy="365" rx="7" ry="10" fill="#DEB887"/>
+  <ellipse cx="235" cy="365" rx="7" ry="10" fill="#DEB887"/>
+  <ellipse cx="250" cy="360" rx="8" ry="12" fill="#DEB887"/>
+</svg>

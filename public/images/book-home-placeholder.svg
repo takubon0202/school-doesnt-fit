@@ -1,0 +1,40 @@
+<svg width="280" height="373" viewBox="0 0 280 373" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="homeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C17B4A"/>
+      <stop offset="100%" style="stop-color:#A66A3D"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="280" height="373" fill="url(#homeGrad)" rx="6"/>
+
+  <!-- 装飾円 -->
+  <circle cx="200" cy="60" r="80" fill="white" opacity="0.1"/>
+  <circle cx="60" cy="320" r="60" fill="white" opacity="0.1"/>
+
+  <!-- 家のアイコン -->
+  <g transform="translate(100, 60)">
+    <path d="M40 0 L80 35 L80 80 L0 80 L0 35 Z" fill="white" opacity="0.3"/>
+    <rect x="30" y="50" width="20" height="30" fill="#C17B4A"/>
+  </g>
+
+  <!-- 上昇矢印 -->
+  <g transform="translate(180, 90)">
+    <path d="M0 40 L20 0 L40 40 L30 40 L30 60 L10 60 L10 40 Z" fill="white" opacity="0.4"/>
+  </g>
+
+  <!-- タイトルエリア -->
+  <rect x="20" y="160" width="240" height="120" fill="white" opacity="0.95" rx="4"/>
+
+  <!-- タイトル -->
+  <text x="140" y="195" font-family="sans-serif" font-size="13" fill="#C17B4A" text-anchor="middle" font-weight="bold">塾へ行かなくても</text>
+  <text x="140" y="220" font-family="sans-serif" font-size="13" fill="#C17B4A" text-anchor="middle" font-weight="bold">成績が超アップ!</text>
+  <text x="140" y="255" font-family="serif" font-size="18" fill="#2D2D2D" text-anchor="middle" font-weight="bold">自宅学習の強化書</text>
+
+  <!-- 著者 -->
+  <text x="140" y="310" font-family="sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">葉一 著</text>
+
+  <!-- 出版社 -->
+  <text x="140" y="340" font-family="sans-serif" font-size="12" fill="white" text-anchor="middle" opacity="0.8">フォレスト出版</text>
+</svg>

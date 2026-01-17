@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="「学校が合わない僕は、高一で起業して、国立大へ行くことにした。」- 発達障害の凸凹塾長が贈る、普通じゃなくても大丈夫という希望の物語。特別支援学級から国立大学へ、高校生起業家の奇跡のリアルストーリー。">
+  <meta name="keywords" content="発達障害, 不登校, 起業, 高校生, 国立大学, 特別支援学級, if塾, メタバース, ADHD, ASD, 学習障害">
+  <meta name="author" content="山﨑琢己">
+  <meta name="theme-color" content="#2D5A47">
+
+  <!-- OGP -->
+  <meta property="og:title" content="学校が合わない僕は、高一で起業して、国立大へ行くことにした。">
+  <meta property="og:description" content="発達障害の凸凹塾長が贈る、普通じゃなくても大丈夫という希望の物語。">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:image" content="./public/images/book-cover.png">
+  <meta property="og:image:width" content="320">
+  <meta property="og:image:height" content="480">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="学校が合わない僕は、高一で起業して、国立大へ行くことにした。">
+  <meta name="twitter:description" content="発達障害の凸凹塾長が贈る、普通じゃなくても大丈夫という希望の物語。">
+  <meta name="twitter:image" content="./public/images/book-cover.png">
+
+  <title>学校が合わない僕は、高一で起業して、国立大へ行くことにした。 | 発達障害の凸凹塾長、奇跡のリアル物語</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+  <!-- スクロール進捗バー -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Skip Link -->
+  <a href="#main" class="sr-only">メインコンテンツへスキップ</a>
+
+  <!-- ========================================
+       ヘッダー
+       ======================================== -->
+  <header class="header" role="banner">
+    <div class="container">
+      <div class="header__inner">
+        <a href="#" class="header__logo">凸凹塾長の物語</a>
+
+        <nav class="header__nav" role="navigation" aria-label="メインナビゲーション">
+          <a href="#about" class="header__nav-link">本について</a>
+          <a href="#author" class="header__nav-link">著者紹介</a>
+          <a href="#toc" class="header__nav-link">目次</a>
+          <a href="#message" class="header__nav-link">メッセージ</a>
+          <a href="#ifjuku" class="header__nav-link">if(塾)</a>
+          <a href="#cta" class="header__nav-link">購入する</a>
+        </nav>
+
+        <button class="header__menu-btn" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================
+       モバイルナビゲーション（bodyの直下に配置）
+       ======================================== -->
+  <nav id="mobile-nav" class="mobile-nav" role="navigation" aria-label="モバイルナビゲーション">
+    <!-- ヘッダー: 閉じるボタン(左) + ロゴ(右) -->
+    <div class="mobile-nav__header">
+      <button class="mobile-nav__close" aria-label="メニューを閉じる">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+        <span class="mobile-nav__close-text">Menu</span>
+      </button>
+      <span class="mobile-nav__logo">凸凹塾長の物語</span>
+    </div>
+
+    <!-- 目次セクション -->
+    <div class="mobile-nav__section-title">目次</div>
+
+    <!-- メニューリンク -->
+    <div class="mobile-nav__links">
+      <a href="#hero" class="mobile-nav__link">Home</a>
+      <a href="#about" class="mobile-nav__link">本について</a>
+      <a href="#author" class="mobile-nav__link">著者紹介</a>
+      <a href="#toc" class="mobile-nav__link">目次・内容</a>
+      <a href="#message" class="mobile-nav__link">メッセージ</a>
+      <a href="#ifjuku" class="mobile-nav__link">if(塾)</a>
+      <a href="#cta" class="mobile-nav__link mobile-nav__link--cta">購入する</a>
+    </div>
+  </nav>
+
+  <!-- ========================================
+       メインコンテンツ
+       ======================================== -->
+  <main id="main" role="main">
+
+    <!-- ヒーローセクション -->
+    <section class="hero fullscreen-section" aria-labelledby="hero-title">
+      <!-- 背景マーキー（装飾的要素） -->
+      <div class="marquee-bg" aria-hidden="true">
+        <div class="marquee-track marquee-track--1">
+          <span class="marquee-text">普通じゃなくていい</span>
+          <span class="marquee-text">凸凹が武器になる</span>
+          <span class="marquee-text">普通じゃなくていい</span>
+          <span class="marquee-text">凸凹が武器になる</span>
+        </div>
+        <div class="marquee-track marquee-track--2">
+          <span class="marquee-text">一歩動けば世界は変わる</span>
+          <span class="marquee-text">可能性は無限大</span>
+          <span class="marquee-text">一歩動けば世界は変わる</span>
+          <span class="marquee-text">可能性は無限大</span>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- メインキャッチコピー -->
+        <p class="hero__main-catch" data-aos="fade-down">
+          普通じゃないから、見えた景色がある。
+        </p>
+
+        <div class="hero__inner">
+          <div class="hero__content" data-aos="fade-right">
+            <div class="hero__badges">
+              <span class="hero__badge hero__badge--highlight">
+                <i class="fas fa-award"></i>
+                秋田県補助金 200万円獲得
+              </span>
+              <span class="hero__badge">2025年発行</span>
+            </div>
+            <h1 id="hero-title" class="hero__title">
+              学校が合わない僕は、<br>
+              <span class="hero__title-highlight">高一で起業して、</span><br>
+              国立大へ行くことにした。
+            </h1>
+            <p class="hero__subtitle">発達障害の凸凹（デコボコ）塾長、奇跡のリアル物語</p>
+
+            <!-- 実績ハイライト -->
+            <div class="hero__stats">
+              <div class="hero__stat" data-aos="fade-up">
+                <span class="hero__stat-number">15歳</span>
+                <span class="hero__stat-label">で起業</span>
+              </div>
+              <div class="hero__stat" data-aos="fade-up" data-aos-delay="100">
+                <span class="hero__stat-number">200万円</span>
+                <span class="hero__stat-label">補助金獲得</span>
+              </div>
+              <div class="hero__stat" data-aos="fade-up" data-aos-delay="200">
+                <span class="hero__stat-number">国立大</span>
+                <span class="hero__stat-label">推薦合格</span>
+              </div>
+            </div>
+
+            <p class="hero__catchphrase">
+              「普通」じゃなくていい。君の凸凹が、未来を変える。
+            </p>
+            <div class="hero__actions">
+              <a href="https://amzn.asia/d/8zgg0Xp" class="btn btn--cta btn--large pulse-glow magnetic-btn ripple-effect" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-amazon"></i>
+                Amazonで購入する
+              </a>
+              <a href="#preview" class="btn btn--secondary btn--large">
+                <i class="fas fa-book-open"></i>
+                試し読み
+              </a>
+            </div>
+          </div>
+
+          <div class="hero__visual" data-aos="fade-left">
+            <div class="hero__book-wrapper floating sparkle">
+              <img
+                src="./public/images/book-cover.png"
+                alt="「学校が合わない僕は、高一で起業して、国立大へ行くことにした。」書籍カバー - 発達障害の凸凹塾長、奇跡のリアル物語"
+                class="hero__book-image"
+                width="320"
+                height="480"
+                loading="eager"
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- スクロールインジケーター -->
+      <div class="scroll-indicator" aria-label="下にスクロール">
+        <span class="scroll-indicator__text">下へ</span>
+        <span class="scroll-indicator__arrow">
+          <i class="fas fa-chevron-down"></i>
+        </span>
+      </div>
+    </section>
+
+    <!-- 著者の歩み タイムラインセクション -->
+    <section id="journey" class="journey-section fullscreen-section" aria-labelledby="journey-title">
+      <div class="container">
+        <h2 id="journey-title" class="section-title" data-aos="fade-up">著者の歩み</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+          特別支援学級から国立大学へ。挑戦の軌跡。
+        </p>
+
+        <div class="journey-timeline">
+          <!-- 2022 -->
+          <article class="journey-item" data-aos="fade-up">
+            <div class="journey-item__marker">
+              <span class="journey-item__year">2022</span>
+              <div class="journey-item__dot"></div>
+            </div>
+            <div class="journey-item__content">
+              <div class="journey-item__icon">
+                <i class="fas fa-rocket"></i>
+              </div>
+              <h3 class="journey-item__title">高校1年生で起業</h3>
+              <p class="journey-item__text">通信制高校でITを学びながら、個人事業主として活動開始。プログラミングスキルを活かした事業をスタート。</p>
+            </div>
+          </article>
+
+          <!-- 2023 -->
+          <article class="journey-item journey-item--accent" data-aos="fade-up" data-aos-delay="100">
+            <div class="journey-item__marker">
+              <span class="journey-item__year">2023</span>
+              <div class="journey-item__dot"></div>
+            </div>
+            <div class="journey-item__content">
+              <div class="journey-item__icon">
+                <i class="fas fa-trophy"></i>
+              </div>
+              <h3 class="journey-item__title">200万円補助金獲得</h3>
+              <p class="journey-item__text">秋田県「若者チャレンジ応援事業」に採択。高校生での採択は県内最年少。<abbr title="インターネット上の仮想空間。VRやゲームなどで体験できる3D世界のこと">メタバース</abbr>教育への挑戦が評価される。</p>
+            </div>
+          </article>
+
+          <!-- 2024 -->
+          <article class="journey-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="journey-item__marker">
+              <span class="journey-item__year">2024</span>
+              <div class="journey-item__dot"></div>
+            </div>
+            <div class="journey-item__content">
+              <div class="journey-item__icon">
+                <i class="fas fa-school"></i>
+              </div>
+              <h3 class="journey-item__title">if(塾)開業</h3>
+              <p class="journey-item__text">メタバース×Minecraftを活用した学習塾を本格オープン。<abbr title="心の専門家。心理的な問題を解決する国家資格を持つ専門職">臨床心理士</abbr>との共同運営で、発達障害の子どもたちを支援。</p>
+            </div>
+          </article>
+
+          <!-- 2025 ハイライト -->
+          <article class="journey-item journey-item--highlight" data-aos="fade-up" data-aos-delay="300">
+            <div class="journey-item__marker">
+              <span class="journey-item__year">2025</span>
+              <div class="journey-item__dot"></div>
+            </div>
+            <div class="journey-item__content">
+              <div class="journey-item__icon">
+                <i class="fas fa-book"></i>
+              </div>
+              <h3 class="journey-item__title">国立大学合格・書籍発売</h3>
+              <p class="journey-item__text">推薦入試で国立大学合格。自身の経験を綴った本『学校が合わない僕は〜』を出版。多くの読者に希望を届ける。</p>
+            </div>
+          </article>
+
+          <!-- 現在 -->
+          <article class="journey-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="journey-item__marker">
+              <span class="journey-item__year">現在</span>
+              <div class="journey-item__dot"></div>
+            </div>
+            <div class="journey-item__content">
+              <div class="journey-item__icon">
+                <i class="fas fa-star"></i>
+              </div>
+              <h3 class="journey-item__title"><abbr title="Non-Profit Organization（非営利団体）。利益を目的とせず社会貢献活動を行う団体">NPO</abbr>理事・大学生</h3>
+              <p class="journey-item__text">教育支援活動を継続しながら、大学生として新たな学びに挑戦。凸凹を武器に、さらなる可能性を追求中。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 試し読みセクション -->
+    <section id="preview" class="preview fullscreen-section" aria-labelledby="preview-title">
+      <div class="container">
+        <h2 id="preview-title" class="preview__title">試し読み</h2>
+        <p class="preview__subtitle">本の内容をちょっとだけご紹介</p>
+
+        <div class="preview__content">
+          <div class="preview__intro" data-aos="fade-up">
+            <p class="preview__lead">
+              特別支援学級で過ごした少年が、<br>
+              高校1年生で起業し、国立大学に合格するまでの軌跡——
+            </p>
+            <blockquote class="preview__quote">
+              「できないことを嘆くのではなく、できる方法を見つける」
+            </blockquote>
+          </div>
+
+          <div class="preview__chapters stagger-children">
+            <div class="preview__chapter" data-aos="fade-up">
+              <span class="preview__chapter-num">第1章</span>
+              <h3 class="preview__chapter-title">「普通」という名の見えない壁</h3>
+              <p>小学校で感じた違和感、教室に入れなくなった朝...</p>
+            </div>
+            <div class="preview__chapter" data-aos="fade-up" data-aos-delay="100">
+              <span class="preview__chapter-num">第2章</span>
+              <h3 class="preview__chapter-title">お金を稼ぐ喜びが人生を変えた！</h3>
+              <p>通信制高校でITと出会い、初めて「自分の価値」を感じた...</p>
+            </div>
+            <div class="preview__chapter" data-aos="fade-up" data-aos-delay="200">
+              <span class="preview__chapter-num">第3章</span>
+              <h3 class="preview__chapter-title">メタバースが変える特別支援教育</h3>
+              <p>前代未聞の挑戦で200万円の補助金を獲得...</p>
+            </div>
+          </div>
+
+          <a href="https://amzn.asia/d/8zgg0Xp" class="btn btn--primary btn--large" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-amazon"></i>
+            続きをAmazonで読む
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 本の概要セクション -->
+    <section id="about" class="about fullscreen-section" aria-labelledby="about-title">
+      <!-- 浮遊する装飾パーティクル -->
+      <div class="floating-particles" aria-hidden="true">
+        <span class="particle particle--1"></span>
+        <span class="particle particle--2"></span>
+        <span class="particle particle--3"></span>
+        <span class="particle particle--4"></span>
+        <span class="particle particle--5"></span>
+        <span class="particle particle--6"></span>
+      </div>
+      <!-- 動く幾何学模様 -->
+      <div class="geometric-bg" aria-hidden="true">
+        <div class="geometric-shape geometric-shape--circle"></div>
+        <div class="geometric-shape geometric-shape--ring"></div>
+        <div class="geometric-shape geometric-shape--dots"></div>
+      </div>
+      <div class="container">
+        <h2 id="about-title" class="section-title">この本について</h2>
+        <p class="section-subtitle">
+          特別支援学級から国立大学へ。高校生で起業し、200万円の補助金を獲得した著者が贈る、希望の物語。
+        </p>
+
+        <div class="about__grid stagger-children">
+          <article class="about__card reveal-scale" data-aos="fade-up" data-aos-delay="0">
+            <div class="about__icon jelly">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3 class="about__card-title">凸凹を強みに変える</h3>
+            <p class="about__card-text">
+              発達障害（ADHD, ASD）と診断された著者が、「普通じゃない」ことを武器に変え、新しい道を切り拓いていく実話。できないことを嘆くのではなく、できる方法を見つける姿勢が詰まっています。
+            </p>
+          </article>
+
+          <article class="about__card reveal-scale" data-aos="fade-up" data-aos-delay="100">
+            <div class="about__icon jelly">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h3 class="about__card-title">高校生起業家の挑戦</h3>
+            <p class="about__card-text">
+              高校1年生で個人事業主として起業。Minecraftとメタバースを活用した「if(塾)」を立ち上げ、秋田県から200万円の補助金を獲得。前代未聞の挑戦の軌跡を追います。
+            </p>
+          </article>
+
+          <article class="about__card reveal-scale" data-aos="fade-up" data-aos-delay="200">
+            <div class="about__icon jelly heartbeat">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h3 class="about__card-title"><abbr title="心の専門家。心理的な問題を解決する国家資格を持つ専門職">臨床心理士</abbr>監修</h3>
+            <p class="about__card-text">
+              臨床心理士・高崎翔太（ゲタバコ先生）による専門的なアドバイスを各章に収録。発達特性を持つ子どもたちへの心理的サポートや、保護者・教育者向けの具体的なアプローチを解説しています。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 著者紹介セクション -->
+    <section id="author" class="author fullscreen-section" aria-labelledby="author-title">
+      <div class="container">
+        <h2 id="author-title" class="section-title">著者・監修紹介</h2>
+        <p class="section-subtitle">
+          発達障害当事者として、そして教育者として。二人三脚で歩んできた物語。
+        </p>
+
+        <div class="author__grid">
+          <article class="author__card" data-aos="fade-right">
+            <div class="author__header">
+              <div class="author__avatar author__avatar--image">
+                <img src="./public/images/author-yamazaki.png" alt="山﨑琢己" class="author__avatar-img">
+              </div>
+              <div class="author__info">
+                <h3>山﨑 琢己</h3>
+                <span class="author__role">著者 / if(塾) 塾長</span>
+              </div>
+            </div>
+            <div class="author__bio">
+              <p>
+                2007年2月2日生まれ。大阪府寝屋川市出身、2012年に秋田県秋田市へ移住。小学6年生で発達障害（ADHD, ASD）と診断され、中学時代は特別支援学級（情緒）に在籍。
+              </p>
+              <p>
+                高校1年生の夏に個人事業主として起業。高校2年生で秋田県「若者チャレンジ応援事業」に採択され、200万円の補助金を獲得。高校3年生春に「if(塾)」を開業し、塾長に就任。推薦入試で国立大学に合格。
+              </p>
+            </div>
+            <div class="author__highlights">
+              <div class="author__highlight">高校1年生で個人事業主として起業</div>
+              <div class="author__highlight">200万円の補助金を獲得</div>
+              <div class="author__highlight">特別支援学級から国立大学合格</div>
+              <div class="author__highlight">テレビ取材・地域企業との連携多数</div>
+            </div>
+          </article>
+
+          <article class="author__card" data-aos="fade-left">
+            <div class="author__header">
+              <div class="author__avatar author__avatar--image">
+                <img src="./public/images/author-takasaki.png" alt="高崎翔太（ゲタバコ先生）" class="author__avatar-img">
+              </div>
+              <div class="author__info">
+                <h3>高崎 翔太（ゲタバコ先生）</h3>
+                <span class="author__role">監修 / if(塾) 塾頭 / 臨床心理士</span>
+              </div>
+            </div>
+            <div class="author__bio">
+              <p>
+                専修大学 文学部心理学科卒業、同大学院 文学研究科心理専攻 修士課程修了。臨床心理士として活動しながら、if(塾)の塾頭として著者と共に運営に携わる。
+              </p>
+              <p>
+                2012年に秋田県へ移住し、発達障害や不登校で悩む子どもたちの支援に尽力。本書では各章に「臨床心理士からのアドバイス」を寄稿し、専門的な視点から読者をサポートしている。
+              </p>
+            </div>
+            <div class="author__highlights">
+              <div class="author__highlight">臨床心理士として活動</div>
+              <div class="author__highlight">専修大学大学院 心理学修士</div>
+              <div class="author__highlight">if(塾)塾頭として共同運営</div>
+              <div class="author__highlight">発達障害・不登校支援の専門家</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 著者ストーリーセクション -->
+    <section id="author-story" class="author-story fullscreen-section" aria-labelledby="author-story-title">
+      <div class="container">
+        <!-- キャッチコピー -->
+        <div class="author-story__header" data-aos="fade-up">
+          <h2 id="author-story-title" class="author-story__catchphrase">
+            普通じゃない!?<br>
+            <span class="author-story__accent">だから人生は楽しい！</span>
+          </h2>
+          <p class="author-story__subtitle">
+            みんなと違う？ 変わってる？ 勉強ができない。<br>
+            でもチャレンジを恐れなかったからこそ今がある
+          </p>
+        </div>
+
+        <!-- タイムライン -->
+        <div class="author-story__timeline" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="author-story__section-title">著者の歩み</h3>
+          <div class="timeline" role="list" aria-label="著者の人生の歩み">
+            <div class="timeline__item" role="listitem">
+              <div class="timeline__marker" aria-hidden="true"></div>
+              <div class="timeline__content">
+                <div class="timeline__image-wrapper">
+                  <img src="./public/images/generated/author-journey-childhood.png" alt="幼少期のイメージ - 希望に満ちた始まり" class="timeline__image" width="400" height="300" loading="lazy">
+                </div>
+                <span class="timeline__period">幼少期</span>
+                <p class="timeline__text">大阪で誕生、秋田へ移住</p>
+              </div>
+            </div>
+            <div class="timeline__item" role="listitem">
+              <div class="timeline__marker" aria-hidden="true"></div>
+              <div class="timeline__content">
+                <div class="timeline__image-wrapper">
+                  <img src="./public/images/generated/author-journey-elementary.png" alt="小学校時代のイメージ - 窓の外を見つめる少年" class="timeline__image" width="400" height="300" loading="lazy">
+                </div>
+                <span class="timeline__period">小学校</span>
+                <p class="timeline__text">教室に入れなくなる<br>ADHD・ASD診断</p>
+              </div>
+            </div>
+            <div class="timeline__item" role="listitem">
+              <div class="timeline__marker" aria-hidden="true"></div>
+              <div class="timeline__content">
+                <div class="timeline__image-wrapper">
+                  <img src="./public/images/generated/author-journey-junior-high.png" alt="中学校時代のイメージ - 自分の道を見つける" class="timeline__image" width="400" height="300" loading="lazy">
+                </div>
+                <span class="timeline__period">中学校</span>
+                <p class="timeline__text">特別支援学級へ<br>ネガティブな日々</p>
+              </div>
+            </div>
+            <div class="timeline__item" role="listitem">
+              <div class="timeline__marker" aria-hidden="true"></div>
+              <div class="timeline__content">
+                <div class="timeline__image-wrapper">
+                  <img src="./public/images/generated/author-journey-high-school.png" alt="高校時代のイメージ - 起業への挑戦と希望の光" class="timeline__image" width="400" height="300" loading="lazy">
+                </div>
+                <span class="timeline__period">高校</span>
+                <p class="timeline__text">IT専攻・起業<br>200万円補助金獲得</p>
+              </div>
+            </div>
+            <div class="timeline__item" role="listitem">
+              <div class="timeline__marker" aria-hidden="true"></div>
+              <div class="timeline__content">
+                <div class="timeline__image-wrapper">
+                  <img src="./public/images/generated/author-journey-present.png" alt="現在のイメージ - 次世代を導く教育者として" class="timeline__image" width="400" height="300" loading="lazy">
+                </div>
+                <span class="timeline__period">現在</span>
+                <p class="timeline__text">国立大合格<br>if塾塾長・NPO理事</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ターニングポイント -->
+        <div class="author-story__turning-points" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="author-story__section-title">ターニングポイント</h3>
+          <div class="turning-points stagger-children">
+            <article class="turning-point">
+              <div class="turning-point__image-wrapper">
+                <img src="./public/images/generated/turning-point-1.png" alt="別の道を見つけるイメージ" class="turning-point__image" width="400" height="400" loading="lazy">
+              </div>
+              <span class="turning-point__number" aria-hidden="true">1</span>
+              <h4 class="turning-point__title">暴れたワケ</h4>
+              <p class="turning-point__text">
+                我慢していた思いが爆発。親に気持ちが通じないなか、自分の気持ちを伝えるために「極端な行動」で環境を変えようとした。良くない方法だったけど、気持ちを押さえ込んでいたら、もっと大変なことになっていたかも。
+              </p>
+            </article>
+            <article class="turning-point">
+              <div class="turning-point__image-wrapper">
+                <img src="./public/images/generated/turning-point-2.png" alt="自分を見つめるイメージ" class="turning-point__image" width="400" height="400" loading="lazy">
+              </div>
+              <span class="turning-point__number" aria-hidden="true">2</span>
+              <h4 class="turning-point__title">ITとの出会い</h4>
+              <p class="turning-point__text">
+                ITを使ってお金を稼ぐ、起業するという挑戦。最初は「単純に面白そう」と思い始める。活躍している大人を見て、世の中には色んな生き方をしている人がいると実感した。
+              </p>
+            </article>
+            <article class="turning-point">
+              <div class="turning-point__image-wrapper">
+                <img src="./public/images/generated/turning-point-3.png" alt="誰かを支えるイメージ" class="turning-point__image" width="400" height="400" loading="lazy">
+              </div>
+              <span class="turning-point__number" aria-hidden="true">3</span>
+              <h4 class="turning-point__title">if塾開業への決意</h4>
+              <p class="turning-point__text">
+                自身が経験した「好きなことをとことん伸ばせる居場所づくり」の実践を決意。活動を続けた実績が認められ、自信がついた。発達障害で悩む当事者や保護者に勇気を届けたい。
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <!-- 座右の銘 -->
+        <div class="author-story__motto" data-aos="zoom-in" data-aos-delay="300">
+          <blockquote class="motto">
+            <span class="motto__icon" aria-hidden="true">"</span>
+            <p class="motto__text">一歩動けば世界は変わる</p>
+            <cite class="motto__author">— 山﨑琢己の座右の銘</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- 目次セクション -->
+    <section id="toc" class="toc fullscreen-section" aria-labelledby="toc-title">
+      <div class="container">
+        <h2 id="toc-title" class="section-title">目次</h2>
+        <p class="section-subtitle">
+          全6章で綴る、普通じゃない道を歩んできた軌跡。
+        </p>
+
+        <div class="toc__list">
+          <div class="toc__item" data-aos="fade-up">
+            <button class="toc__header" aria-expanded="false">
+              <span class="toc__number">1</span>
+              <span class="toc__title">「普通」という名の見えない壁</span>
+              <i class="fas fa-chevron-down toc__toggle"></i>
+            </button>
+            <div class="toc__content">
+              <p>
+                特別支援学級で過ごした私の記録。小学校で感じた違和感、教室に入れなくなった朝、癇癪と診断。「普通」という見えない壁に苦しんだ日々を振り返る。
+              </p>
+            </div>
+          </div>
+
+          <div class="toc__item" data-aos="fade-up" data-aos-delay="50">
+            <button class="toc__header" aria-expanded="false">
+              <span class="toc__number">2</span>
+              <span class="toc__title">お金を稼ぐ喜びが人生を変えた！</span>
+              <i class="fas fa-chevron-down toc__toggle"></i>
+            </button>
+            <div class="toc__content">
+              <p>
+                通信制高校でITと出会い、学校のホームページ制作で初めて「自分の価値」を感じた。高校1年生で個人事業主になり、起業家との出会いで世界が広がる。
+              </p>
+            </div>
+          </div>
+
+          <div class="toc__item" data-aos="fade-up" data-aos-delay="100">
+            <button class="toc__header" aria-expanded="false">
+              <span class="toc__number">3</span>
+              <span class="toc__title">メタバースが変える特別支援教育</span>
+              <i class="fas fa-chevron-down toc__toggle"></i>
+            </button>
+            <div class="toc__content">
+              <p>
+                「もし楽しく学べる場所があれば」——MinecraftとメタバースでVR教室を構想。前代未聞の挑戦で秋田県から200万円の補助金を獲得した軌跡。
+              </p>
+            </div>
+          </div>
+
+          <div class="toc__item" data-aos="fade-up" data-aos-delay="150">
+            <button class="toc__header" aria-expanded="false">
+              <span class="toc__number">4</span>
+              <span class="toc__title">社会が注目！凸凹を武器にする高校生起業家の挑戦</span>
+              <i class="fas fa-chevron-down toc__toggle"></i>
+            </button>
+            <div class="toc__content">
+              <p>
+                テレビ取材、地域企業との連携、AI開発。社会とつながり、「凸凹」を武器に変えていく高校生起業家の軌跡。if(塾)本格開業への道。
+              </p>
+            </div>
+          </div>
+
+          <div class="toc__item" data-aos="fade-up" data-aos-delay="200">
+            <button class="toc__header" aria-expanded="false">
+              <span class="toc__number">5</span>
+              <span class="toc__title">「休む勇気」が導いた国立大学合格への道</span>
+              <i class="fas fa-chevron-down toc__toggle"></i>
+            </button>
+            <div class="toc__content">
+              <p>
+                「皆勤賞は褒めることじゃない」——投資家の一言で学んだ「休む勇気」。勉強なしの推薦入試で国立大学合格へ。凸凹塾長流「勉強しない」大学受験。
+              </p>
+            </div>
+          </div>
+
+          <div class="toc__item" data-aos="fade-up" data-aos-delay="250">
+            <button class="toc__header" aria-expanded="false">
+              <span class="toc__number">6</span>
+              <span class="toc__title">凸凹塾長の新たな挑戦</span>
+              <i class="fas fa-chevron-down toc__toggle"></i>
+            </button>
+            <div class="toc__content">
+              <p>
+                合格通知を手に、新たな挑戦へ。大学生活と本を書く未来。読むのは苦手でも「書きたい」という思いから生まれた、この本の物語。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 読者の声セクション -->
+    <section class="testimonials fullscreen-section" aria-labelledby="testimonials-title">
+      <div class="container">
+        <h2 id="testimonials-title" class="section-title">こんな方に読んでほしい</h2>
+        <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">
+          あなたの「普通じゃない」は、実は最大の強みかもしれません。
+        </p>
+
+        <div class="testimonials__grid stagger-children">
+          <article class="testimonial" data-aos="fade-up">
+            <p class="testimonial__text">
+              「学校に行きたくない」「勉強が苦手」そんな自分を責めていませんか？この本は、同じ経験をした著者からの優しいメッセージです。
+            </p>
+            <div class="testimonial__author">
+              <div class="testimonial__avatar">
+                <i class="fas fa-child"></i>
+              </div>
+              <div>
+                <div class="testimonial__name">発達障害のあるお子さん</div>
+                <div class="testimonial__role">小学生〜高校生</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial" data-aos="fade-up" data-aos-delay="100">
+            <p class="testimonial__text">
+              「この子の将来はどうなるんだろう」そんな不安を抱えていませんか？具体的な成功例と専門家のアドバイスが、希望の光になります。
+            </p>
+            <div class="testimonial__author">
+              <div class="testimonial__avatar">
+                <i class="fas fa-users"></i>
+              </div>
+              <div>
+                <div class="testimonial__name">保護者の方</div>
+                <div class="testimonial__role">発達障害・不登校のお子さんを持つ方</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial" data-aos="fade-up" data-aos-delay="200">
+            <p class="testimonial__text">
+              「どう接すればいいかわからない」そんな悩みはありませんか？臨床心理士監修の具体的なアドバイスが、現場で役立ちます。
+            </p>
+            <div class="testimonial__author">
+              <div class="testimonial__avatar">
+                <i class="fas fa-chalkboard-teacher"></i>
+              </div>
+              <div>
+                <div class="testimonial__name">教育関係者の方</div>
+                <div class="testimonial__role">教員・支援員・カウンセラー</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- キーメッセージセクション -->
+    <section id="message" class="message-v2 fullscreen-section" aria-labelledby="message-title">
+      <div class="container">
+        <!-- ヘッダー部分 -->
+        <div class="message-v2__header" data-aos="fade-up">
+          <span class="message-v2__label">著者より</span>
+          <h2 id="message-title" class="message-v2__title">
+            心に届けたい<br class="sp-only">
+            <span class="message-v2__title-accent">大切な言葉</span>
+          </h2>
+          <p class="message-v2__subtitle">
+            同じ道を歩んできた著者だからこそ伝えられる、<br class="sp-only">あなたへのメッセージ
+          </p>
+        </div>
+
+        <!-- タブナビゲーション（リデザイン） -->
+        <div class="message-v2__tabs-wrapper" data-aos="fade-up" data-aos-delay="100">
+          <div class="message-v2__tabs" role="tablist" aria-label="メッセージカテゴリ">
+            <button class="message-v2__tab message-v2__tab--active"
+                    role="tab"
+                    id="tab-parents"
+                    aria-selected="true"
+                    aria-controls="panel-parents"
+                    data-tab="parents">
+              <span class="message-v2__tab-icon">
+                <i class="fas fa-hands-holding-heart" aria-hidden="true"></i>
+              </span>
+              <span class="message-v2__tab-content">
+                <span class="message-v2__tab-label">保護者の方へ</span>
+                <span class="message-v2__tab-desc">お子さまを支えるあなたへ</span>
+              </span>
+            </button>
+            <button class="message-v2__tab"
+                    role="tab"
+                    id="tab-children"
+                    aria-selected="false"
+                    aria-controls="panel-children"
+                    data-tab="children">
+              <span class="message-v2__tab-icon">
+                <i class="fas fa-seedling" aria-hidden="true"></i>
+              </span>
+              <span class="message-v2__tab-content">
+                <span class="message-v2__tab-label">子どもたちへ</span>
+                <span class="message-v2__tab-desc">同じ経験をした先輩より</span>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <!-- タブコンテンツ（リデザイン） -->
+        <div class="message-v2__panel-wrapper" data-aos="fade-up" data-aos-delay="150">
+          <!-- 保護者向けパネル -->
+          <div class="message-v2__panel message-v2__panel--active"
+               id="panel-parents"
+               role="tabpanel"
+               aria-labelledby="tab-parents"
+               data-panel="parents">
+            <div class="message-v2__panel-inner">
+              <div class="message-v2__quote-mark" aria-hidden="true">"</div>
+              <div class="message-v2__messages">
+                <div class="message-v2__message-item">
+                  <span class="message-v2__message-icon"><i class="fas fa-ear-listen"></i></span>
+                  <p>焦ったり、必要以上に心配したりせず、<strong>子どもの話をじっくり聞いてあげてください</strong>。</p>
+                </div>
+                <div class="message-v2__message-item message-v2__message-item--highlight">
+                  <span class="message-v2__message-icon"><i class="fas fa-shield-heart"></i></span>
+                  <p>「普通じゃない」「ダメ」といった<strong>否定の言葉は絶対に聞かせないで</strong>！</p>
+                </div>
+                <div class="message-v2__message-item">
+                  <span class="message-v2__message-icon"><i class="fas fa-lightbulb"></i></span>
+                  <p>「〜だったらどう？」と<strong>視点を変えて考える力</strong>を育ててあげてください。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 子ども向けパネル -->
+          <div class="message-v2__panel"
+               id="panel-children"
+               role="tabpanel"
+               aria-labelledby="tab-children"
+               data-panel="children"
+               hidden>
+            <div class="message-v2__panel-inner">
+              <div class="message-v2__quote-mark" aria-hidden="true">"</div>
+              <div class="message-v2__messages">
+                <div class="message-v2__message-item">
+                  <span class="message-v2__message-icon"><i class="fas fa-heart-circle-check"></i></span>
+                  <p>理解されない、学校が合わない…<strong>そんな経験、僕もたくさんしてきた</strong>。</p>
+                </div>
+                <div class="message-v2__message-item message-v2__message-item--highlight">
+                  <span class="message-v2__message-icon"><i class="fas fa-door-open"></i></span>
+                  <p>でも大丈夫。<strong>学校がすべてじゃない</strong>。他の道はいくらでもある！</p>
+                </div>
+                <div class="message-v2__message-item">
+                  <span class="message-v2__message-icon"><i class="fas fa-compass"></i></span>
+                  <p>楽しいと感じることを探して、<strong>いろんな人に出会ってみて</strong>。</p>
+                </div>
+                <div class="message-v2__message-item message-v2__message-item--cta">
+                  <span class="message-v2__message-icon"><i class="fas fa-route"></i></span>
+                  <p class="message-v2__message-big">生き方に正解はなく、<br><strong>生き方はたくさんある！</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 推薦コメント -->
+        <div class="message-v2__testimonial" data-aos="fade-up">
+          <div class="testimonial">
+            <blockquote class="testimonial__quote">
+              山﨑くんは、ADHDであることを公表し著書も持つ、私が受け持つ大学の生徒の一人です。
+              授業でChatGPTなどAIを活用し自らの特性を主体的にマネジメントする姿は、
+              その難しさにとらわれるのではなく自分の特性を生かして工夫する視点を
+              クラスに広げています。
+            </blockquote>
+            <div class="testimonial__author">
+              <div class="testimonial__author-info">
+                <span class="testimonial__author-name">相原 嘉子</span>
+                <span class="testimonial__author-title">
+                  医療法人健希会 常任理事 / 山形大学 非常勤講師 / MBA
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- コアメッセージカード（リデザイン） -->
+        <div class="message-v2__core" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="message-v2__core-title">
+            <span class="message-v2__core-icon"><i class="fas fa-star"></i></span>
+            この本が伝えたいこと
+          </h3>
+          <div class="message-v2__core-grid stagger-children">
+            <div class="message-v2__core-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="message-v2__core-card-icon">
+                <i class="fas fa-hand-holding-heart"></i>
+              </div>
+              <p class="message-v2__core-card-text">今自信がなくても大丈夫、<br><strong>普通じゃなくても大丈夫</strong></p>
+            </div>
+            <div class="message-v2__core-card" data-aos="fade-up" data-aos-delay="150">
+              <div class="message-v2__core-card-icon">
+                <i class="fas fa-puzzle-piece"></i>
+              </div>
+              <p class="message-v2__core-card-text">できないことを嘆くより、<br><strong>できる方法を見つける</strong></p>
+            </div>
+            <div class="message-v2__core-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="message-v2__core-card-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <p class="message-v2__core-card-text">学力より大切なのは<br><strong>行動力・柔軟性・人間性</strong></p>
+            </div>
+            <div class="message-v2__core-card message-v2__core-card--accent" data-aos="fade-up" data-aos-delay="250">
+              <div class="message-v2__core-card-icon">
+                <i class="fas fa-rocket"></i>
+              </div>
+              <p class="message-v2__core-card-text">あなたの一歩が、<br><strong>世界を変える</strong></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- if(塾)紹介セクション -->
+    <section id="ifjuku" class="ifjuku ifjuku--cyber fullscreen-section" aria-labelledby="ifjuku-title">
+      <!-- サイバー背景エフェクト -->
+      <div class="cyber-bg" aria-hidden="true">
+        <div class="cyber-grid"></div>
+        <div class="cyber-scanlines"></div>
+        <div class="cyber-glow cyber-glow--1"></div>
+        <div class="cyber-glow cyber-glow--2"></div>
+        <div class="cyber-particles">
+          <span class="cyber-particle"></span>
+          <span class="cyber-particle"></span>
+          <span class="cyber-particle"></span>
+          <span class="cyber-particle"></span>
+          <span class="cyber-particle"></span>
+        </div>
+      </div>
+      <div class="container">
+        <!-- if(塾)についてセクション -->
+        <div class="ifjuku__about" data-aos="fade-up">
+          <h2 id="ifjuku-title" class="ifjuku__title">
+            if(塾)について
+          </h2>
+
+          <div class="ifjuku__image-wrapper">
+            <img
+              src="public/images/aboutpc.png"
+              alt="if塾は誰でも通えて、AIと起業が学べる未来型教室。好きなことを好きなだけやればいい。専門家、AI、当事者のトリプルサポート。好きなことで自分のやりたいことを実現。"
+              class="ifjuku__image"
+              width="1200"
+              height="675"
+              loading="lazy"
+            >
+          </div>
+        </div>
+
+        <!-- サービス案内ヘッダー -->
+        <div class="ifjuku__header" data-aos="fade-up" data-aos-delay="100">
+          <div class="ifjuku__logo-wrapper">
+            <img
+              src="public/images/ifjuku-logo.png"
+              alt="if塾ロゴ"
+              class="ifjuku__logo-img"
+              width="300"
+              height="154"
+              loading="lazy"
+            >
+          </div>
+          <h3 class="ifjuku__subtitle">
+            月額11,000円（税込）〜で利用できる、<br>
+            if(塾)の全面サポートサブスクリプション！
+          </h3>
+        </div>
+
+        <!-- 5つのサービスグリッド -->
+        <div class="ifjuku__features stagger-children" data-aos="fade-up" data-aos-delay="200">
+          <div class="ifjuku__feature">
+            <div class="ifjuku__feature-icon">
+              <i class="fas fa-laptop"></i>
+            </div>
+            <h4>オンライン授業</h4>
+            <p>全国どこからでも参加可能</p>
+          </div>
+
+          <div class="ifjuku__feature">
+            <div class="ifjuku__feature-icon">
+              <i class="fas fa-comments"></i>
+            </div>
+            <h4>教育相談</h4>
+            <p>保護者向けサポート</p>
+          </div>
+
+          <div class="ifjuku__feature">
+            <div class="ifjuku__feature-icon">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <h4>案件割振</h4>
+            <p>実践的な仕事体験</p>
+          </div>
+
+          <div class="ifjuku__feature">
+            <div class="ifjuku__feature-icon">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h4>独立サポート</h4>
+            <p>起業・独立を支援</p>
+          </div>
+
+          <div class="ifjuku__feature">
+            <div class="ifjuku__feature-icon">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h4>AI先生</h4>
+            <p>24時間質問可能</p>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="ifjuku__cta" data-aos="fade-up" data-aos-delay="300">
+          <p class="ifjuku__cta-text">
+            「普通の塾は合わなかった」「学校に行けない」——<br>
+            そんな君の居場所が、ここにある。
+          </p>
+          <div class="ifjuku__cta-buttons">
+            <a href="https://if-juku.net/" class="btn btn--cta" target="_blank" rel="noopener noreferrer">
+              無料体験授業を申し込む
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="https://if-juku.net/" class="btn btn--secondary" target="_blank" rel="noopener noreferrer">
+              公式サイトで詳しく見る
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTAセクション -->
+    <section id="cta" class="cta fullscreen-section" aria-labelledby="cta-title">
+      <div class="container">
+        <h2 id="cta-title" class="cta__title">
+          あなたの居場所は、きっと見つかる
+        </h2>
+        <p class="cta__text">
+          学校が合わなくても、普通じゃなくても、あなたの可能性は無限大です。<br>
+          この本が、あなたの新しい一歩を支える力になりますように。
+        </p>
+        <div class="cta__actions">
+          <a href="https://amzn.asia/d/8zgg0Xp" class="btn btn--cta btn--large" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-amazon"></i>
+            Amazonで購入する
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================
+       フッター
+       ======================================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <h3>学校が合わない僕は、高一で起業して、国立大へ行くことにした。</h3>
+          <p>
+            発達障害の凸凹塾長が贈る、普通じゃなくても大丈夫という希望の物語。特別支援学級から国立大学へ、高校生起業家の奇跡のリアルストーリー。
+          </p>
+          <div class="footer__social">
+            <a href="https://if-juku.net/" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="公式サイト">
+              <i class="fas fa-globe"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__links">
+          <h4>ページ内リンク</h4>
+          <a href="#about" class="footer__link">本について</a>
+          <a href="#author" class="footer__link">著者紹介</a>
+          <a href="#toc" class="footer__link">目次</a>
+          <a href="#message" class="footer__link">メッセージ</a>
+          <a href="#ifjuku" class="footer__link">if(塾)</a>
+        </div>
+
+        <div class="footer__links">
+          <h4>外部リンク</h4>
+          <a href="https://if-juku.net/" class="footer__link" target="_blank" rel="noopener noreferrer">if(塾)公式サイト</a>
+          <a href="https://if-juku.net/2024/04/14/ifblog1/" class="footer__link" target="_blank" rel="noopener noreferrer">ブログ：心と体の体力</a>
+          <a href="https://if-juku.net/2024/04/23/ifblog2/" class="footer__link" target="_blank" rel="noopener noreferrer">ブログ：頭が良いと勉強</a>
+          <a href="https://if-juku.net/2024/12/06/university/" class="footer__link" target="_blank" rel="noopener noreferrer">ブログ：合格して思ったこと</a>
+        </div>
+
+        <div class="footer__links footer__contact">
+          <h4>お問い合わせ</h4>
+          <p class="footer__contact-text">ご質問・ご相談は公式サイトより受け付けております</p>
+          <a href="https://if-juku.net/#contact" class="footer__link footer__link--contact" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-envelope"></i> お問い合わせフォーム
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>2025 &copy; if(塾) All Rights Reserved.</p>
+        <p style="margin-top: var(--spacing-sm);">編集協力：AI（ChatGPT, Gemini, Claude）</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 固定CTAボタン（SHOE DOG風） -->
+  <div class="fixed-cta" id="fixed-cta">
+    <a href="https://amzn.asia/d/8zgg0Xp" class="fixed-cta__btn" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-amazon"></i>
+      <span>Amazonで購入</span>
+    </a>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="src/js/main.js"></script>
+</body>
+</html>

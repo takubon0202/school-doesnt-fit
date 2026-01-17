@@ -1,0 +1,40 @@
+# ===== APIキー・機密情報（絶対にプッシュ禁止）=====
+*.env
+.env*
+*api_key*
+*apikey*
+secrets/
+credentials/
+
+# ===== 画像生成スクリプト（ローカル専用）=====
+generate_images.py
+image_generator/
+scripts/generate*.py
+
+# ===== ローカル専用サブエージェント =====
+.claude/commands/agents/*-local.md
+.claude/commands/agents/*-local/
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+
+# ===== Node.js =====
+node_modules/
+npm-debug.log
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# ===== IDE =====
+.vscode/
+.idea/
+*.sublime-*
