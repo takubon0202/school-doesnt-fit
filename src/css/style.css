@@ -1116,6 +1116,7 @@ h6 {
 
 .preview__chapters {
   display: grid;
+  grid-template-columns: 1fr;
   gap: var(--spacing-lg);
   margin-bottom: var(--spacing-2xl);
 }
@@ -4722,7 +4723,7 @@ html {
 }
 
 .cta__book-image {
-  max-width: 200px;
+  max-width: 320px;
   height: auto;
   border-radius: var(--border-radius-md);
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
@@ -5147,9 +5148,6 @@ html {
   }
   .hero__visual {
     order: 2;
-  }
-  .preview__chapters {
-    grid-template-columns: repeat(3, 1fr);
   }
   .about__grid {
     grid-template-columns: repeat(3, 1fr);
