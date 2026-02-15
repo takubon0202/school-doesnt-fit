@@ -1,9 +1,10 @@
 /**
  * 学校が合わない僕は、高一で起業して、国立大へ行くことにした。
- * 書籍紹介ランディングページ - メインスクリプト v8
+ * 書籍紹介ランディングページ - メインスクリプト v9 (Apple.com風)
  *
  * 最適化版: 統合IntersectionObserver・統合スクロールハンドラ
  * パフォーマンス改善: 6+ Observers → 1, 4+ scroll listeners → 1 RAF loop
+ * Apple風アニメーション: パララックス・スケール・数字カウント・段階表示
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /**
  * すべてのスクロール連動処理を単一の requestAnimationFrame ループで実行
+ * Apple.com風: パララックス・スケール・背景変化を追加
  */
 function initScrollHandler() {
   const header = document.querySelector('.header');
@@ -34,6 +36,9 @@ function initScrollHandler() {
   const footer = document.querySelector('.footer');
   const progressBar = document.querySelector('.scroll-progress');
   const parallaxElements = document.querySelectorAll('[data-parallax]');
+  const scaleElements = document.querySelectorAll('[data-scale]');
+  const stickyElements = document.querySelectorAll('[data-sticky-content]');
+  const bgTransitionSections = document.querySelectorAll('[data-bg-transition]');
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   let ticking = false;
@@ -75,14 +80,65 @@ function initScrollHandler() {
         progressBar.style.width = `${(scrollY / docHeight) * 100}%`;
       }
 
-      // Parallax elements
+      // Apple風: Parallax elements with enhanced easing
       if (!prefersReducedMotion && parallaxElements.length > 0) {
         parallaxElements.forEach(el => {
           const speed = parseFloat(el.dataset.parallax) || 0.5;
           const rect = el.getBoundingClientRect();
           if (rect.top < windowHeight && rect.bottom > 0) {
             const elementTop = rect.top + scrollY;
-            el.style.transform = `translateY(${(scrollY - elementTop) * speed}px)`;
+            const offset = (scrollY - elementTop) * speed;
+            el.style.transform = `translateY(${offset}px)`;
+            el.style.willChange = 'transform';
+          }
+        });
+      }
+
+      // Apple風: Scale animation on scroll
+      if (!prefersReducedMotion && scaleElements.length > 0) {
+        scaleElements.forEach(el => {
+          const rect = el.getBoundingClientRect();
+          const elementCenter = rect.top + rect.height / 2;
+          const viewportCenter = windowHeight / 2;
+          const distance = Math.abs(elementCenter - viewportCenter);
+          const maxDistance = windowHeight / 2;
+          const proximity = Math.max(0, 1 - distance / maxDistance);
+
+          // スケール: 0.9 → 1.0 (中心に近づくほど大きく)
+          const scale = 0.9 + proximity * 0.1;
+          const opacity = 0.5 + proximity * 0.5;
+
+          if (rect.top < windowHeight && rect.bottom > 0) {
+            el.style.transform = `scale(${scale})`;
+            el.style.opacity = opacity;
+            el.style.willChange = 'transform, opacity';
+          }
+        });
+      }
+
+      // Apple風: Sticky section content change
+      if (!prefersReducedMotion && stickyElements.length > 0) {
+        stickyElements.forEach(el => {
+          const parent = el.closest('[data-sticky-section]');
+          if (!parent) return;
+
+          const rect = parent.getBoundingClientRect();
+          const progress = Math.max(0, Math.min(1, -rect.top / (rect.height - windowHeight)));
+
+          // 進捗に応じてコンテンツを変化
+          el.style.setProperty('--sticky-progress', progress);
+        });
+      }
+
+      // Apple風: Background color transition between sections
+      if (!prefersReducedMotion && bgTransitionSections.length > 0) {
+        bgTransitionSections.forEach(section => {
+          const rect = section.getBoundingClientRect();
+          const bgColor = section.dataset.bgTransition;
+
+          if (rect.top < windowHeight * 0.5 && rect.bottom > windowHeight * 0.5) {
+            document.body.style.transition = 'background-color 0.6s cubic-bezier(0.25, 0.1, 0.25, 1)';
+            document.body.style.backgroundColor = bgColor || 'transparent';
           }
         });
       }
@@ -115,16 +171,19 @@ function initScrollHandler() {
 
 /**
  * 全要素の表示アニメーションを1つの IntersectionObserver で管理
+ * Apple風強化: 細かい閾値・段階的表示・数字カウント
  *
  * 対象:
  *  - .fullscreen-section → is-visible + stagger children
- *  - [data-aos]          → aos-animate (with delay)
+ *  - [data-aos]          → aos-animate (with delay) + enhanced distance
  *  - .image-reveal       → revealed
  *  - .count-up           → trigger animateCountUp
+ *  - [data-count-target] → Apple風数字カウントアップ
  *  - .stagger-children   → is-visible
  *  - [data-stagger-group]→ stagger children is-visible
  *  - .reveal-scale       → is-visible
  *  - section, .fullscreen-section → animate-in / pop-in for titles & cards
+ *  - [data-stagger-text] → タイトル→サブテキスト→画像の段階表示
  */
 function initUnifiedObserver() {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -141,11 +200,28 @@ function initUnifiedObserver() {
     return;
   }
 
+  // Apple風: 細かい閾値で連続的なアニメーション制御
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-
       const el = entry.target;
+      const ratio = entry.intersectionRatio;
+
+      // Apple風: 表示率に応じた連続的なopacity/transform変化
+      if (el.hasAttribute('data-progressive-reveal')) {
+        const opacity = Math.min(1, ratio * 2);
+        const translateY = Math.max(0, (1 - ratio) * 60);
+        el.style.opacity = opacity;
+        el.style.transform = `translateY(${translateY}px)`;
+        el.style.transition = 'opacity 0.6s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1)';
+
+        if (ratio > 0.5) {
+          el.classList.add('is-visible');
+          observer.unobserve(el);
+        }
+        return;
+      }
+
+      if (!entry.isIntersecting) return;
 
       // --- .fullscreen-section → add is-visible, trigger stagger children ---
       if (el.classList.contains('fullscreen-section')) {
@@ -156,12 +232,16 @@ function initUnifiedObserver() {
         });
       }
 
-      // --- [data-aos] → add aos-animate with optional delay ---
+      // --- [data-aos] → add aos-animate with optional delay (Apple風: 60px distance) ---
       if (el.hasAttribute('data-aos')) {
         const delay = parseInt(el.dataset.aosDelay, 10) || 0;
-        setTimeout(() => el.classList.add('aos-animate'), Math.min(delay, 500));
+        setTimeout(() => {
+          el.classList.add('aos-animate');
+          // Apple風の滑らかなイージング
+          el.style.transition = 'opacity 0.8s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1)';
+        }, Math.min(delay, 500));
         observer.unobserve(el);
-        return; // data-aos elements only need this behavior
+        return;
       }
 
       // --- .image-reveal → add revealed ---
@@ -177,6 +257,42 @@ function initUnifiedObserver() {
         const duration = parseInt(el.dataset.duration, 10) || 2000;
         const suffix = el.dataset.suffix || '';
         animateCountUp(el, 0, target, duration, suffix);
+        observer.unobserve(el);
+        return;
+      }
+
+      // --- Apple風: [data-count-target] 数字カウントアップ ---
+      if (el.hasAttribute('data-count-target')) {
+        const target = parseInt(el.dataset.countTarget, 10) || 0;
+        const duration = parseInt(el.dataset.countDuration, 10) || 1500;
+        const prefix = el.dataset.countPrefix || '';
+        const suffix = el.dataset.countSuffix || '';
+        const decimals = parseInt(el.dataset.countDecimals, 10) || 0;
+        animateAppleCountUp(el, 0, target, duration, prefix, suffix, decimals);
+        observer.unobserve(el);
+        return;
+      }
+
+      // --- Apple風: [data-stagger-text] タイトル→サブテキスト→画像の段階表示 ---
+      if (el.hasAttribute('data-stagger-text')) {
+        const title = el.querySelector('[data-stagger-title]');
+        const subtitle = el.querySelector('[data-stagger-subtitle]');
+        const image = el.querySelector('[data-stagger-image]');
+        const cards = el.querySelectorAll('[data-stagger-card]');
+
+        if (title) {
+          setTimeout(() => title.classList.add('is-visible'), 0);
+        }
+        if (subtitle) {
+          setTimeout(() => subtitle.classList.add('is-visible'), 150);
+        }
+        if (image) {
+          setTimeout(() => image.classList.add('is-visible'), 300);
+        }
+        cards.forEach((card, index) => {
+          setTimeout(() => card.classList.add('is-visible'), 450 + index * 150);
+        });
+
         observer.unobserve(el);
         return;
       }
@@ -224,7 +340,8 @@ function initUnifiedObserver() {
   }, {
     root: null,
     rootMargin: '0px 0px -50px 0px',
-    threshold: 0.1
+    // Apple風: 細かい閾値で段階的制御
+    threshold: [0, 0.1, 0.2, 0.3, 0.5, 0.7, 1.0]
   });
 
   // Collect and observe all target elements
@@ -233,6 +350,9 @@ function initUnifiedObserver() {
     '[data-aos]',
     '.image-reveal',
     '.count-up',
+    '[data-count-target]',
+    '[data-stagger-text]',
+    '[data-progressive-reveal]',
     '.stagger-children',
     '[data-stagger-group]',
     '.reveal-scale',
@@ -257,6 +377,8 @@ function initUnifiedObserver() {
 function revealAllImmediately() {
   document.querySelectorAll('.fullscreen-section, [data-aos]').forEach(el => {
     el.classList.add('is-visible', 'aos-animate');
+    el.style.opacity = '1';
+    el.style.transform = 'none';
   });
   document.querySelectorAll('.image-reveal').forEach(el => {
     el.classList.add('revealed');
@@ -265,6 +387,13 @@ function revealAllImmediately() {
     el.classList.add('is-visible');
   });
   document.querySelectorAll('[data-stagger]').forEach(el => {
+    el.classList.add('is-visible');
+  });
+  document.querySelectorAll('[data-progressive-reveal]').forEach(el => {
+    el.style.opacity = '1';
+    el.style.transform = 'none';
+  });
+  document.querySelectorAll('[data-stagger-title], [data-stagger-subtitle], [data-stagger-image], [data-stagger-card]').forEach(el => {
     el.classList.add('is-visible');
   });
 }
@@ -566,6 +695,44 @@ function animateCountUp(element, start, end, duration, suffix) {
 
     if (progress < 1) {
       requestAnimationFrame(updateCount);
+    }
+  };
+
+  requestAnimationFrame(updateCount);
+}
+
+/**
+ * Apple風カウントアップアニメーション
+ * prefix/suffixサポート、小数点対応、滑らかなイージング
+ */
+function animateAppleCountUp(element, start, end, duration, prefix = '', suffix = '', decimals = 0) {
+  const startTime = performance.now();
+
+  const updateCount = (currentTime) => {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+
+    // Apple風イージング: cubic-bezier(0.25, 0.1, 0.25, 1)相当
+    const t = progress;
+    const easeInOutCubic = t < 0.5
+      ? 4 * t * t * t
+      : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+    const current = start + (end - start) * easeInOutCubic;
+    const formatted = decimals > 0
+      ? current.toFixed(decimals)
+      : Math.floor(current).toLocaleString();
+
+    element.textContent = prefix + formatted + suffix;
+
+    if (progress < 1) {
+      requestAnimationFrame(updateCount);
+    } else {
+      // 最終値を正確に設定
+      const finalFormatted = decimals > 0
+        ? end.toFixed(decimals)
+        : end.toLocaleString();
+      element.textContent = prefix + finalFormatted + suffix;
     }
   };
 

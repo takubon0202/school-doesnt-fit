@@ -175,8 +175,11 @@
        ======================================== -->
   <main id="main" role="main">
 
-    <!-- ヒーローセクション -->
-    <section id="hero" class="hero fullscreen-section" aria-labelledby="hero-title">
+    <!-- ヒーローセクション (Apple風: フルスクリーン・センター配置) -->
+    <section id="hero" class="hero fullscreen-section section--dark" data-bg-transition="dark" aria-labelledby="hero-title">
+      <!-- Apple風: 背景グラデーションオーバーレイ -->
+      <div class="hero__bg-overlay" aria-hidden="true"></div>
+
       <!-- 背景マーキー（装飾的要素） -->
       <div class="marquee-bg" aria-hidden="true">
         <div class="marquee-track marquee-track--1">
@@ -193,9 +196,9 @@
         </div>
       </div>
 
-      <div class="container">
-        <!-- メインキャッチコピー -->
-        <p class="hero__main-catch" data-aos="fade-down">
+      <div class="container container--wide">
+        <!-- Apple風: メインキャッチ（超大型タイポグラフィ） -->
+        <p class="hero__main-catch" data-aos="fade-down" data-scale="1.05">
           普通じゃないから、見えた景色がある。
         </p>
 
@@ -207,22 +210,25 @@
                 秋田県補助金 200万円獲得
               </span>
               <span class="hero__badge">2025年発行</span>
+              <span class="hero__badge">Kindle Unlimited対象</span>
             </div>
-            <h1 id="hero-title" class="hero__title">
+            <h1 id="hero-title" class="hero__title" data-scale="1.02">
               学校が合わない僕は、<br>
               <span class="hero__title-highlight">高一で起業して、</span><br>
               国立大へ行くことにした。
             </h1>
             <p class="hero__subtitle">発達障害の凸凹（デコボコ）塾長、奇跡のリアル物語</p>
 
-            <!-- 実績ハイライト -->
+            <!-- Apple風: 実績ハイライト（大きな数字） -->
             <div class="hero__stats">
               <div class="hero__stat" data-aos="fade-up">
-                <span class="hero__stat-number">15歳</span>
+                <span class="hero__stat-number" data-count="15">15</span>
+                <span class="hero__stat-unit">歳</span>
                 <span class="hero__stat-label">で起業</span>
               </div>
               <div class="hero__stat" data-aos="fade-up" data-aos-delay="100">
-                <span class="hero__stat-number">200万円</span>
+                <span class="hero__stat-number" data-count="200">200</span>
+                <span class="hero__stat-unit">万円</span>
                 <span class="hero__stat-label">補助金獲得</span>
               </div>
               <div class="hero__stat" data-aos="fade-up" data-aos-delay="200">
@@ -249,10 +255,10 @@
             </div>
           </div>
 
-          <div class="hero__visual" data-aos="fade-left">
+          <div class="hero__visual" data-aos="fade-left" data-parallax="0.15">
             <div class="hero__book-wrapper floating float-animation">
               <img src="./public/images/book-cover.png" alt="「学校が合わない僕は、高一で起業して、国立大へ行くことにした。」書籍カバー - 発達障害の凸凹塾長、奇跡のリアル物語"
-                class="hero__book-image" width="320" height="480" loading="eager">
+                class="hero__book-image" width="320" height="480" loading="eager" data-scale="1.05">
             </div>
           </div>
         </div>
@@ -260,16 +266,16 @@
 
       <!-- スクロールインジケーター -->
       <div class="scroll-indicator" aria-label="下にスクロール">
-        <span class="scroll-indicator__text">下へ</span>
+        <span class="scroll-indicator__text">Scroll</span>
         <span class="scroll-indicator__arrow">
           <i class="fas fa-chevron-down" aria-hidden="true"></i>
         </span>
       </div>
     </section>
 
-    <!-- 著者の歩み タイムラインセクション -->
-    <section id="journey" class="journey-section fullscreen-section" aria-labelledby="journey-title">
-      <div class="container">
+    <!-- 著者の歩み タイムラインセクション (Apple風: ライトセクション) -->
+    <section id="journey" class="journey-section fullscreen-section section--light" data-bg-transition="light" aria-labelledby="journey-title">
+      <div class="container container--wide">
         <h2 id="journey-title" class="section-title" data-aos="fade-up">著者の歩み — 特別支援学級から国立大学・起業への軌跡</h2>
         <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
           特別支援学級から国立大学へ。挑戦の軌跡。
@@ -357,53 +363,89 @@
       </div>
     </section>
 
-    <!-- 試し読みセクション -->
-    <section id="preview" class="preview fullscreen-section" aria-labelledby="preview-title">
-      <div class="container">
-        <h2 id="preview-title" class="preview__title">試し読み</h2>
-        <p class="preview__subtitle">本の内容をちょっとだけご紹介</p>
-
-        <div class="preview__content">
-          <div class="preview__intro" data-aos="fade-up">
-            <p class="preview__lead">
-              特別支援学級で過ごした少年が、<br>
-              高校1年生で起業し、国立大学に合格するまでの軌跡——
-            </p>
-            <blockquote class="preview__quote">
-              「できないことを嘆くのではなく、できる方法を見つける」
-            </blockquote>
+    <!-- Apple風: インパクトナンバーズ（フルワイド・ダークセクション） -->
+    <section class="impact-numbers section--dark fullscreen-section" data-bg-transition="dark" aria-label="主な実績">
+      <div class="container container--wide">
+        <div class="impact-numbers__grid">
+          <div class="impact-numbers__item" data-aos="fade-up">
+            <span class="impact-numbers__number" data-count-target="15">0</span>
+            <span class="impact-numbers__unit">歳</span>
+            <p class="impact-numbers__label">個人事業主として起業</p>
           </div>
-
-          <div class="preview__chapters stagger-children">
-            <div class="preview__chapter" data-aos="fade-up">
-              <span class="preview__chapter-num">第1章</span>
-              <h3 class="preview__chapter-title">「普通」という名の見えない壁</h3>
-              <p>小学校で感じた違和感、教室に入れなくなった朝。ADHD・ASDの診断、特別支援学級での日々。「普通」という見えない壁に苦しんだ著者の原点を描く。</p>
-            </div>
-            <div class="preview__chapter" data-aos="fade-up" data-aos-delay="100">
-              <span class="preview__chapter-num">第2章</span>
-              <h3 class="preview__chapter-title">お金を稼ぐ喜びが人生を変えた！</h3>
-              <p>通信制高校でITと出会い、学校のホームページ制作で初めて「自分の価値」を感じた。高校1年生で個人事業主になり、起業家との出会いで世界が広がっていく。</p>
-            </div>
-            <div class="preview__chapter" data-aos="fade-up" data-aos-delay="200">
-              <span class="preview__chapter-num">第3章</span>
-              <h3 class="preview__chapter-title">メタバースが変える特別支援教育</h3>
-              <p>「もし楽しく学べる場所があれば」——MinecraftとメタバースでVR教室を構想。前代未聞の挑戦で秋田県から200万円の補助金を獲得した軌跡。</p>
-            </div>
+          <div class="impact-numbers__item" data-aos="fade-up" data-aos-delay="100">
+            <span class="impact-numbers__number" data-count-target="200">0</span>
+            <span class="impact-numbers__unit">万円</span>
+            <p class="impact-numbers__label">秋田県補助金を獲得<br><small>県内最年少での採択</small></p>
           </div>
-
-          <a href="https://amzn.asia/d/8zgg0Xp" class="btn btn--primary btn--large" target="_blank"
-            rel="noopener noreferrer">
-            <i class="fab fa-amazon" aria-hidden="true"></i>
-            続きをAmazonで読む
-          </a>
+          <div class="impact-numbers__item" data-aos="fade-up" data-aos-delay="200">
+            <span class="impact-numbers__number" data-count-target="550">0</span>
+            <span class="impact-numbers__unit">円</span>
+            <p class="impact-numbers__label">Kindle価格<br><small>Kindle Unlimited なら無料</small></p>
+          </div>
+          <div class="impact-numbers__item" data-aos="fade-up" data-aos-delay="300">
+            <span class="impact-numbers__number" data-count-target="6">0</span>
+            <span class="impact-numbers__unit">章</span>
+            <p class="impact-numbers__label">凸凹塾長のリアルストーリー<br><small>臨床心理士の解説付き</small></p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 書籍情報セクション -->
-    <section id="book-info" class="book-info" aria-labelledby="book-info-title">
-      <div class="container">
+    <!-- 試し読みセクション (Apple風: Scrollytelling レイアウト) -->
+    <section id="preview" class="preview fullscreen-section section--light" data-bg-transition="light" aria-labelledby="preview-title">
+      <div class="container container--wide">
+        <h2 id="preview-title" class="preview__title" data-aos="fade-up">試し読み</h2>
+        <p class="preview__subtitle" data-aos="fade-up" data-aos-delay="50">本の内容をちょっとだけご紹介</p>
+
+        <div class="preview__content preview__content--scrolly">
+          <!-- Apple風: 左にスティッキー本画像、右にスクロールコンテンツ -->
+          <div class="preview__sticky-visual" data-sticky-content>
+            <img src="./public/images/book-cover.png" alt="書籍カバー" class="preview__sticky-image" width="280" height="420" loading="lazy" data-parallax="0.1">
+            <blockquote class="preview__quote">
+              「できないことを嘆くのではなく、<br>できる方法を見つける」
+            </blockquote>
+          </div>
+
+          <div class="preview__scroll-content">
+            <div class="preview__intro" data-aos="fade-up">
+              <p class="preview__lead">
+                特別支援学級で過ごした少年が、<br>
+                高校1年生で起業し、国立大学に合格するまでの軌跡——
+              </p>
+            </div>
+
+            <div class="preview__chapters stagger-children">
+              <div class="preview__chapter" data-aos="fade-up">
+                <span class="preview__chapter-num">第1章</span>
+                <h3 class="preview__chapter-title">「普通」という名の見えない壁</h3>
+                <p>小学校で感じた違和感、教室に入れなくなった朝。ADHD・ASDの診断、特別支援学級での日々。「普通」という見えない壁に苦しんだ著者の原点を描く。</p>
+              </div>
+              <div class="preview__chapter" data-aos="fade-up" data-aos-delay="100">
+                <span class="preview__chapter-num">第2章</span>
+                <h3 class="preview__chapter-title">お金を稼ぐ喜びが人生を変えた！</h3>
+                <p>通信制高校でITと出会い、学校のホームページ制作で初めて「自分の価値」を感じた。高校1年生で個人事業主になり、起業家との出会いで世界が広がっていく。</p>
+              </div>
+              <div class="preview__chapter" data-aos="fade-up" data-aos-delay="200">
+                <span class="preview__chapter-num">第3章</span>
+                <h3 class="preview__chapter-title">メタバースが変える特別支援教育</h3>
+                <p>「もし楽しく学べる場所があれば」——MinecraftとメタバースでVR教室を構想。前代未聞の挑戦で秋田県から200万円の補助金を獲得した軌跡。</p>
+              </div>
+            </div>
+
+            <a href="https://amzn.asia/d/8zgg0Xp" class="btn btn--cta btn--large" target="_blank"
+              rel="noopener noreferrer">
+              <i class="fab fa-amazon" aria-hidden="true"></i>
+              続きをAmazonで読む
+              <span class="btn__price">¥550</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 書籍情報セクション (Apple風: ダークセクション) -->
+    <section id="book-info" class="book-info section--dark" data-bg-transition="dark" aria-labelledby="book-info-title">
+      <div class="container container--wide">
         <h2 id="book-info-title" class="section-title" data-aos="fade-up">書籍情報</h2>
         <div class="book-info__card glass-panel" data-aos="fade-up" data-aos-delay="100">
           <dl class="book-info__list">
@@ -450,51 +492,74 @@
       </div>
     </section>
 
-    <!-- 本の概要セクション -->
-    <section id="about" class="about fullscreen-section" aria-labelledby="about-title">
-      <div class="container">
-        <h2 id="about-title" class="section-title">この本について — 不登校・発達障害の子に贈る実話</h2>
-        <p class="section-subtitle">
+    <!-- 本の概要セクション (Apple風: Bento Grid + ライトセクション) -->
+    <section id="about" class="about fullscreen-section section--light" data-bg-transition="light" aria-labelledby="about-title">
+      <div class="container container--wide">
+        <h2 id="about-title" class="section-title" data-aos="fade-up">この本について</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="50">
           特別支援学級から国立大学へ。高校生で起業し、200万円の補助金を獲得した著者が贈る、希望の物語。
         </p>
 
-        <div class="about__grid stagger-children">
-          <article class="about__card reveal-scale" data-aos="fade-up" data-aos-delay="0">
-            <div class="about__icon jelly">
+        <!-- Apple風: Bento Grid レイアウト -->
+        <div class="bento-grid stagger-children">
+          <!-- 大きなカード (2列分) -->
+          <article class="bento-card bento-large" data-aos="fade-up">
+            <div class="bento-content">
+              <span class="bento-label">About</span>
+              <h3>凸凹を強みに変える</h3>
+              <p>発達障害（ADHD, ASD）と診断された著者が、「普通じゃない」ことを武器に変え、新しい道を切り拓いていく実話。できないことを嘆くのではなく、できる方法を見つける姿勢が詰まっています。</p>
+            </div>
+            <div class="bento-bg-icon" aria-hidden="true">
               <i class="fas fa-lightbulb" aria-hidden="true"></i>
             </div>
-            <h3 class="about__card-title">凸凹を強みに変える</h3>
-            <p class="about__card-text">
-              発達障害（ADHD, ASD）と診断された著者が、「普通じゃない」ことを武器に変え、新しい道を切り拓いていく実話。できないことを嘆くのではなく、できる方法を見つける姿勢が詰まっています。
-            </p>
           </article>
 
-          <article class="about__card reveal-scale" data-aos="fade-up" data-aos-delay="100">
-            <div class="about__icon jelly">
-              <i class="fas fa-rocket" aria-hidden="true"></i>
+          <!-- 縦長カード (2行分) -->
+          <article class="bento-card bento-tall" data-aos="fade-up" data-aos-delay="100">
+            <div class="bento-content">
+              <span class="bento-label">Author</span>
+              <h3>高校生起業家</h3>
+              <p>15歳で開業届を提出。MinecraftとメタバースでVR教室を構想し、前代未聞の挑戦を続けた。</p>
             </div>
-            <h3 class="about__card-title">高校生起業家の挑戦</h3>
-            <p class="about__card-text">
-              高校1年生で個人事業主として起業。Minecraftとメタバースを活用した「if(塾)」を立ち上げ、秋田県から200万円の補助金を獲得。前代未聞の挑戦の軌跡を追います。
-            </p>
+            <img src="./public/images/author-yamazaki.png" alt="著者 山﨑琢己" class="bento-img" loading="lazy" width="200" height="200">
           </article>
 
-          <article class="about__card reveal-scale" data-aos="fade-up" data-aos-delay="200">
-            <div class="about__icon jelly heartbeat">
-              <i class="fas fa-heart" aria-hidden="true"></i>
+          <!-- 通常カード -->
+          <article class="bento-card" data-aos="fade-up" data-aos-delay="150">
+            <div class="bento-content">
+              <span class="bento-label">Challenge</span>
+              <h3>200万円獲得</h3>
+              <p>秋田県「若者チャレンジ応援事業」に県内最年少で採択。メタバース教育の可能性が認められた。</p>
             </div>
-            <h3 class="about__card-title"><abbr title="心の専門家。心理的な問題を解決する国家資格を持つ専門職">臨床心理士</abbr>監修</h3>
-            <p class="about__card-text">
-              臨床心理士・高崎翔太（ゲタバコ先生）による専門的なアドバイスを各章に収録。発達特性を持つ子どもたちへの心理的サポートや、保護者・教育者向けの具体的なアプローチを解説しています。
-            </p>
+          </article>
+
+          <!-- 通常カード -->
+          <article class="bento-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="bento-content">
+              <span class="bento-label">Expert</span>
+              <h3><abbr title="心の専門家。心理的な問題を解決する国家資格を持つ専門職">臨床心理士</abbr>監修</h3>
+              <p>高崎翔太（ゲタバコ先生）による専門的アドバイスを各章に収録。発達特性への理解と具体的なアプローチを解説。</p>
+            </div>
+          </article>
+
+          <!-- ハイライトカード -->
+          <article class="bento-card bento-accent" data-aos="fade-up" data-aos-delay="250">
+            <div class="bento-content">
+              <span class="bento-label">Kindle</span>
+              <h3>¥550で読める</h3>
+              <p>Kindle Unlimited会員なら無料。いますぐ始まる、希望の物語。</p>
+            </div>
+            <a href="https://amzn.asia/d/8zgg0Xp" class="bento-cta" target="_blank" rel="noopener noreferrer">
+              Amazonで購入 <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- 著者紹介セクション -->
-    <section id="author" class="author fullscreen-section" aria-labelledby="author-title">
-      <div class="container">
+    <!-- 著者紹介セクション (Apple風: ダークセクション) -->
+    <section id="author" class="author fullscreen-section section--dark" data-bg-transition="dark" aria-labelledby="author-title">
+      <div class="container container--wide">
         <h2 id="author-title" class="section-title">著者・監修紹介</h2>
         <p class="section-subtitle">
           発達障害当事者として、そして教育者として。二人三脚で歩んできた物語。
@@ -556,9 +621,9 @@
       </div>
     </section>
 
-    <!-- 著者ストーリーセクション -->
-    <section id="author-story" class="author-story fullscreen-section" aria-labelledby="author-story-title">
-      <div class="container">
+    <!-- 著者ストーリーセクション (Apple風: ライトセクション) -->
+    <section id="author-story" class="author-story fullscreen-section section--light" data-bg-transition="light" aria-labelledby="author-story-title">
+      <div class="container container--wide">
         <!-- キャッチコピー -->
         <div class="author-story__header" data-aos="fade-up">
           <h2 id="author-story-title" class="author-story__catchphrase">
@@ -684,9 +749,9 @@
       </div>
     </section>
 
-    <!-- 目次セクション -->
-    <section id="toc" class="toc fullscreen-section" aria-labelledby="toc-title">
-      <div class="container">
+    <!-- 目次セクション (Apple風: ダークセクション) -->
+    <section id="toc" class="toc fullscreen-section section--dark" data-bg-transition="dark" aria-labelledby="toc-title">
+      <div class="container container--wide">
         <h2 id="toc-title" class="section-title">目次 — 全章で綴る凸凹塾長のリアルストーリー</h2>
         <p class="section-subtitle">
           全6章で綴る、普通じゃない道を歩んできた軌跡。
@@ -774,11 +839,11 @@
       </div>
     </section>
 
-    <!-- 読者の声セクション -->
-    <section class="testimonials fullscreen-section" aria-labelledby="testimonials-title">
-      <div class="container">
+    <!-- 読者の声セクション (Apple風: ダークセクション) -->
+    <section class="testimonials fullscreen-section section--dark" data-bg-transition="dark" aria-labelledby="testimonials-title">
+      <div class="container container--wide">
         <h2 id="testimonials-title" class="section-title">こんな方に読んでほしい</h2>
-        <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">
+        <p class="section-subtitle">
           あなたの「普通じゃない」は、実は最大の強みかもしれません。
         </p>
 
@@ -831,9 +896,9 @@
       </div>
     </section>
 
-    <!-- キーメッセージセクション -->
-    <section id="message" class="message-v2 fullscreen-section" aria-labelledby="message-title">
-      <div class="container">
+    <!-- キーメッセージセクション (Apple風: ダークセクション) -->
+    <section id="message" class="message-v2 fullscreen-section section--dark" data-bg-transition="dark" aria-labelledby="message-title">
+      <div class="container container--wide">
         <!-- ヘッダー部分 -->
         <div class="message-v2__header" data-aos="fade-up">
           <span class="message-v2__label">著者より</span>
@@ -980,9 +1045,9 @@
       </div>
     </section>
 
-    <!-- if(塾)紹介セクション -->
-    <section id="ifjuku" class="ifjuku ifjuku--cyber fullscreen-section" aria-labelledby="ifjuku-title">
-      <div class="container">
+    <!-- if(塾)紹介セクション (Apple風: ライトセクション) -->
+    <section id="ifjuku" class="ifjuku fullscreen-section section--light" data-bg-transition="light" aria-labelledby="ifjuku-title">
+      <div class="container container--wide">
         <!-- if(塾)についてセクション -->
         <div class="ifjuku__about" data-aos="fade-up">
           <h2 id="ifjuku-title" class="ifjuku__title">
@@ -1071,17 +1136,24 @@
       </div>
     </section>
 
-    <!-- CTAセクション -->
-    <section id="cta" class="cta fullscreen-section" aria-labelledby="cta-title">
-      <div class="container">
-        <h2 id="cta-title" class="cta__title">
-          あなたの居場所は、きっと見つかる
+    <!-- CTAセクション (Apple風: フルワイド・ダーク・大型タイポグラフィ) -->
+    <section id="cta" class="cta fullscreen-section section--dark" data-bg-transition="dark" aria-labelledby="cta-title">
+      <div class="container container--wide">
+        <p class="cta__eyecatch" data-aos="fade-up">今すぐ読める。</p>
+        <h2 id="cta-title" class="cta__title" data-aos="fade-up" data-aos-delay="50" data-scale="1.02">
+          あなたの居場所は、<br>きっと見つかる。
         </h2>
-        <p class="cta__text">
+        <p class="cta__text" data-aos="fade-up" data-aos-delay="100">
           学校が合わなくても、普通じゃなくても、あなたの可能性は無限大です。<br>
           この本が、あなたの新しい一歩を支える力になりますように。
         </p>
-        <div class="cta__actions">
+
+        <!-- Apple風: 本の画像 + CTA ボタン -->
+        <div class="cta__visual" data-aos="fade-up" data-aos-delay="150">
+          <img src="./public/images/book-cover.png" alt="書籍カバー" class="cta__book-image" width="200" height="300" loading="lazy" data-parallax="0.08">
+        </div>
+
+        <div class="cta__actions" data-aos="fade-up" data-aos-delay="200">
           <a href="https://amzn.asia/d/8zgg0Xp" class="btn btn--cta btn--large" target="_blank"
             rel="noopener noreferrer">
             <i class="fab fa-amazon" aria-hidden="true"></i>
@@ -1089,6 +1161,22 @@
             <span class="btn__price">¥550</span>
           </a>
           <p class="cta__kindle-note">Kindle Unlimited対象 — 会員なら無料で読めます</p>
+        </div>
+
+        <!-- Apple風: 追加情報 -->
+        <div class="cta__features" data-aos="fade-up" data-aos-delay="250">
+          <div class="cta__feature-item">
+            <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+            <span>スマホで読める</span>
+          </div>
+          <div class="cta__feature-item">
+            <i class="fas fa-tablet-alt" aria-hidden="true"></i>
+            <span>タブレットで読める</span>
+          </div>
+          <div class="cta__feature-item">
+            <i class="fas fa-laptop" aria-hidden="true"></i>
+            <span>PCで読める</span>
+          </div>
         </div>
       </div>
     </section>
