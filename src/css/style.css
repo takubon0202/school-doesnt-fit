@@ -58,10 +58,10 @@
   --spacing-sm: 1rem;
   --spacing-md: 2rem;
   --spacing-lg: 3rem;
-  --spacing-xl: 5rem;
-  --spacing-2xl: 8rem;
-  --spacing-3xl: 12rem;
-  --spacing-4xl: 16rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+  --spacing-3xl: 5rem;
+  --spacing-4xl: 6rem;
   --container-max-width: 1400px;
   /* Apple風のワイドレイアウト: 1200px → 1400px */
   --header-height: 80px;
@@ -131,9 +131,7 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
-  scroll-snap-type: y proximity;
   scroll-padding-top: var(--header-height);
-  /* Apple風のスクロールパディング */
 }
 
 body {
@@ -1259,8 +1257,6 @@ h6 {
    10. Author Section - フルスクリーン
    ========================================================================== */
 .author {
-  min-height: 100vh;
-  min-height: 100dvh;
   padding: var(--spacing-3xl) 0;
   display: flex;
   align-items: center;
@@ -1356,8 +1352,6 @@ h6 {
    11. Author Story Section - フルスクリーン
    ========================================================================== */
 .author-story {
-  min-height: 100vh;
-  min-height: 100dvh;
   padding: var(--spacing-4xl) 0;
   /* Apple風の大きなpadding */
   background: #FFFFFF;
@@ -1601,8 +1595,6 @@ h6 {
    12. TOC Section - フルスクリーン
    ========================================================================== */
 .toc {
-  min-height: 100vh;
-  min-height: 100dvh;
   padding: var(--spacing-4xl) 0;
   display: flex;
   align-items: center;
@@ -1694,8 +1686,6 @@ h6 {
    13. Testimonials Section - フルスクリーン
    ========================================================================== */
 .testimonials {
-  min-height: 100vh;
-  min-height: 100dvh;
   padding: var(--spacing-4xl) 0;
   display: flex;
   align-items: center;
@@ -1772,8 +1762,6 @@ h6 {
    14. Message Section - フルスクリーン
    ========================================================================== */
 .message-v2 {
-  min-height: 100vh;
-  min-height: 100dvh;
   padding: var(--spacing-4xl) 0;
   /* Apple風の大きなpadding */
   background: linear-gradient(180deg, #FFF8F3 0%, #F5F3F0 100%);
@@ -2365,8 +2353,6 @@ h6 {
    16. CTA Section - フルスクリーン
    ========================================================================== */
 .cta {
-  min-height: 100vh;
-  min-height: 100dvh;
   padding: var(--spacing-4xl) 0;
   text-align: center;
   display: flex;
@@ -4474,6 +4460,18 @@ html {
   width: 100%;
 }
 
+/* セクション共通レイアウト（fullscreen-section削除後の代替） */
+.section--dark,
+.section--light {
+  padding-top: clamp(3rem, 6vw, 5rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
 /* ダークセクション（Apple風の深みのある黒） */
 .section--dark {
   background-color: #111111;
@@ -4760,9 +4758,18 @@ html {
    Apple風: ダークセクション内のコンポーネント色調整
    ========================================================================== */
 
-/* ダーク背景上の著者セクション */
+/* ダーク背景上の著者セクション - カードは白背景のため暗い文字を維持 */
+.section--dark .author__card {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
 .section--dark .author__info h3 {
-  color: #F5F5F7;
+  color: #1D1D1F;
+}
+
+.section--dark .author__bio p {
+  color: #333333;
 }
 
 .section--dark .section-subtitle {
@@ -5562,10 +5569,10 @@ html {
   /* 1. Scale down variables for mobile (Apple風) */
   :root {
     --spacing-lg: 1.5rem;
-    --spacing-xl: 2.5rem;
-    --spacing-2xl: 3.5rem;
-    --spacing-3xl: 5rem;
-    --spacing-4xl: 6rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 2.5rem;
+    --spacing-3xl: 3rem;
+    --spacing-4xl: 4rem;
     /* Apple風に適度な余白 */
     --font-size-4xl: 2rem;
     --font-size-3xl: 1.75rem;

@@ -223,8 +223,8 @@ function initUnifiedObserver() {
 
       if (!entry.isIntersecting) return;
 
-      // --- .fullscreen-section → add is-visible, trigger stagger children ---
-      if (el.classList.contains('fullscreen-section')) {
+      // --- section → add is-visible, trigger stagger children ---
+      if (el.tagName === 'SECTION') {
         el.classList.add('is-visible');
         const staggerElements = el.querySelectorAll('[data-stagger]');
         staggerElements.forEach((child, index) => {
@@ -346,7 +346,6 @@ function initUnifiedObserver() {
 
   // Collect and observe all target elements
   const selectors = [
-    '.fullscreen-section',
     '[data-aos]',
     '.image-reveal',
     '.count-up',
@@ -375,7 +374,7 @@ function initUnifiedObserver() {
  * アニメーション無効時にすべての要素を即座に表示する
  */
 function revealAllImmediately() {
-  document.querySelectorAll('.fullscreen-section, [data-aos]').forEach(el => {
+  document.querySelectorAll('section, [data-aos]').forEach(el => {
     el.classList.add('is-visible', 'aos-animate');
     el.style.opacity = '1';
     el.style.transform = 'none';
