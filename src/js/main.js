@@ -943,29 +943,6 @@ function initMagneticButtons() {
   });
 }
 
-/**
- * タイピングアニメーション
- */
-function initTypewriter(element, text, speed = 50) {
-  if (!element) return;
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    element.textContent = text;
-    return;
-  }
-
-  element.textContent = '';
-  let i = 0;
-
-  function type() {
-    if (i < text.length) {
-      element.textContent += text.charAt(i);
-      i++;
-      setTimeout(type, speed);
-    }
-  }
-
-  type();
-}
 
 /**
  * ボタンのホバーで揺れるアニメーション
